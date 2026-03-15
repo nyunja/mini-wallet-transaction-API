@@ -21,6 +21,8 @@
   "homepage": "https://github.com/nyunja/mini-wallet-transaction-API#readme",
   "dependencies": {
     "better-sqlite3": "^12.8.0",
-    "express": "^5.2.1"
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0"
   }
 }
