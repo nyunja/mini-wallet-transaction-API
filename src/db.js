@@ -20,9 +20,10 @@ db.exec(`
     );
     CREATE TABLE IF NOT EXISTS transactions (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        from_wallet_id INTEGER NOT NULL,
-        to_wallet_id INTEGER NOT NULL,
+        from_wallet_id INTEGER,
+        to_wallet_id INTEGER,
         amount INTEGER NOT NULL,
+        type TEXT NOT NULL,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         FOREIGN KEY(from_wallet_id) REFERENCES wallets(id),
         FOREIGN KEY(to_wallet_id) REFERENCES wallets(id)
