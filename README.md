@@ -99,3 +99,9 @@ All mutating routes (`POST`, `PUT`, `PATCH`, `DELETE`) require `Content-Type: ap
 
 ### 7. Helmet middleware
 Sets secure HTTP response headers out of the box (e.g. `X-Frame-Options`, `X-Content-Type-Options`, `Strict-Transport-Security`).
+
+### 8. Flat service structure
+All route logic lives in `src/router/wallets.js`. In a production system this would be split into controllers (request/response handling) and services (business logic). For this scope, the single-file approach keeps the code readable without unnecessary abstraction.
+
+### 9. Idempotency not implemented
+This API does not support idempotency keys. In a production financial system, a client retrying a failed request (e.g. network timeout) could trigger duplicate transfers. This would be handled by accepting an `X-Idempotency-Key` header and storing processed keys to detect and reject duplicate requests.
