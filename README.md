@@ -7,6 +7,8 @@ A simple backend service for managing wallet transactions built with Node.js, Ex
 ## Setup
 
 ```bash
+git clone https://github.com/nyunja/mini-wallet-transaction-API.git
+cd mini-wallet-transaction-API
 npm install
 ```
 
